@@ -14,7 +14,7 @@ function Header() {
 		<header className="header">
 			<div className="container wrapper">
 				<div>
-					<img alt='logo' src={process.env.PUBLIC_URL + "Logo.svg"}/>
+					<img alt='logo' src="../../../public/Logo.svg"/>
 				</div>
 				<div className="header-buttons">
 					<Button {...btns[0]}/>

@@ -25,7 +25,7 @@ function User(props) {
 			<div className="loader">
 				{
 					loader ?
-						<img alt="loader" src={process.env.PUBLIC_URL + 'Preloader.svg'} /> :
+						<img alt="loader" src="../../../../public/Preloader.svg" /> :
 						!(array.length >= +totalUsers) && <Button {...btn}/>
 				}
 			</div>

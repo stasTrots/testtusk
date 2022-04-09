@@ -2,8 +2,10 @@
   "name": "test",
   "version": "0.1.0",
   "private": true,
+	"homepage": "https://stastrots.github.io/testtusk/",
   "dependencies": {
     "axios": "^0.26.1",
+    "gh-pages": "^3.2.3",
     "node-sass": "^4.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -14,7 +16,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+		"deploy": "gh-pages -d build",
+		"predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [

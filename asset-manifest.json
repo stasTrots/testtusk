@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/testtusk/static/css/main.eedc2c46.css",
+    "main.css": "/testtusk/static/css/main.051b26fb.css",
     "main.js": "/testtusk/static/js/main.a3ad93b6.js",
-    "static/media/intro.jpeg": "/testtusk/static/media/intro.be7665f876bbd9138501.jpeg",
+    "static/media/intro.jpeg": "/testtusk/static/media/intro.17eb5721128ce956eee0.jpeg",
     "index.html": "/testtusk/index.html",
-    "main.eedc2c46.css.map": "/testtusk/static/css/main.eedc2c46.css.map",
+    "main.051b26fb.css.map": "/testtusk/static/css/main.051b26fb.css.map",
     "main.a3ad93b6.js.map": "/testtusk/static/js/main.a3ad93b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.eedc2c46.css",
+    "static/css/main.051b26fb.css",
     "static/js/main.a3ad93b6.js"
   ]
 }

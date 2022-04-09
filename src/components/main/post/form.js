@@ -23,7 +23,7 @@ function FormPost(props) {
 	})
 	const inputs = [
 		{ holder: 'Your name', name: 'name', value: formState.name, cb: changeForm, style: 'input', type: 'text', helper: '', pattern: '[A-ZА-Я][a-zа-я]{2,}'},
-		{ holder: 'Email', name: 'email', value: formState.email, cb: changeForm, style: 'input', type: 'email', helper: '', pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'},
+		{ holder: 'Email', name: 'email', value: formState.email, cb: changeForm, style: 'input', type: 'email', helper: '', pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+[.][a-z]{2,4}$'},
 		{ holder: 'Phone', name: 'phone', value: formState.phone, cb: changeForm, style: 'input', type: 'tel', helper: '+38 (XXX) XXX - XX - XX', pattern: '[+][0-9]{12}'},
 	]
 	const btnStatus = (!formState.name.length || !formState.email.length || !formState.phone.length || !formState.position_id || !formState.photo) ? true : false

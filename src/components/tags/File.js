@@ -1,12 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 
 function File(props) {
 
-	const { cb } = props
-	const [state, setState] = useState({
-		success: true,
-		file: null
-	})
+	const { cb, state, setState } = props
+
 
 	function changeState(e) {
 		if (e.target.files[0]) {

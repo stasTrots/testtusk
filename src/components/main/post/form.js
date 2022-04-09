@@ -5,14 +5,14 @@ import { Button } from "../../tags/Button"
 import { File } from "../../tags/File"
 import { Input } from "../../tags/Input"
 import { Radio } from "../../tags/Radio"
-import { getUser } from '../../../redux/Users/action.js'
+import { getUser, changeModal } from '../../../redux/Users/action.js'
 
 function FormPost(props) {
 
 	// State
 	const { positions, token } = props.user
 	// Action
-	const { getUser } = props
+	const { getUser, changeModal } = props
 	let formData = new FormData()
 	const [formState, setFormState] = useState({
 		name: '',
@@ -20,6 +20,10 @@ function FormPost(props) {
 		phone: '',
 		position_id: null,
 		photo: null
+	})
+	const [state, setState] = useState({
+		success: true,
+		file: null
 	})
 	const inputs = [
 		{ holder: 'Your name', name: 'name', value: formState.name, cb: changeForm, style: 'input', type: 'text', helper: '', pattern: '[A-ZА-Я][a-zа-я]{2,}'},
@@ -43,12 +47,29 @@ function FormPost(props) {
 		}).then(response => response.json())
 			.then(data => {
 				if (data.success) {
+					clearState()
+					changeModal(true)
 					getUser({ url: "/api/v1/users?page=1&count=6", condition: false })
 				} else {
 					alert('Невозможно добавить NewUser...')
 				}
 		})		
 	}
+
+	function clearState() {
+		setFormState({
+			name: '',
+			email: '',
+			phone: '',
+			position_id: null,
+			photo: null
+		})
+		setState({
+			success: true,
+			file: null
+		})
+	}
+
 	function changeForm(event) {
 		setFormState({
 			...formState,
@@ -66,11 +87,11 @@ function FormPost(props) {
 	return (
 		<form onSubmit={e => e.preventDefault()} className='form-post-section'>
 			{inputs.map((item, i) => <Input key={i} {...item} />)}
-			<Radio array={positions} title='Select your position' cb={changeForm}/>
-			<File cb={changePhoto}/>
+			<Radio array={positions} title='Select your position' cb={changeForm} value={formState.position_id}/>
+			<File cb={changePhoto} state={state} setState={setState}/>
 			<Button {...btn} />
 		</form>
 	)
 }
 
-export default connect(({user}) => ({user}), {getUser})(FormPost)
+export default connect(({user}) => ({user}), {getUser, changeModal})(FormPost)

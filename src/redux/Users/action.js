@@ -1,4 +1,4 @@
-import { GET_POSITION, GET_TOKEN, GET_TOKEN_SAGA, GET_USERS, ONLOAD_USERS, SET_POSITION, SET_USERS } from "../types"
+import { GET_POSITION, GET_TOKEN, GET_TOKEN_SAGA, GET_USERS, MODAL_STATE, ONLOAD_USERS, SET_POSITION, SET_USERS } from "../types"
 
 export const getUser = data => {
 	return {
@@ -33,6 +33,13 @@ export const setPosition = data => {
 export const onloadUsers = data => {
 	return {
 		type: ONLOAD_USERS,
+		payload: data
+	}
+}
+
+export const changeModal = data => {
+	return {
+		type: MODAL_STATE,
 		payload: data
 	}
 }

@@ -8,3 +8,5 @@ export const GET_TOKEN_SAGA = 'GET_TOKEN_SAGA'
 
 export const GET_POSITION = 'GET_POSITION'
 export const SET_POSITION = 'SET_POSITION'
+
+export const MODAL_STATE = 'MODAL_STATE'

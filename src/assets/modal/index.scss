@@ -1,0 +1,46 @@
+@import './ModalRegister.scss';
+
+.modal-container {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+
+	opacity: 1;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: rgba($color: #000000, $alpha: .8);
+
+	transition: all .2s linear;
+	animation: modalOpen .5s linear;
+	&.exit {
+		animation: modalClose 1s linear;
+	}
+}
+
+@keyframes modalOpen {
+	0% {
+		z-index: -1;
+		opacity: 0;
+	}
+	100% {
+		z-index: 100;
+		opacity: 1;
+	}
+}
+
+@keyframes modalClose {
+	from {
+		z-index: 100;
+		opacity: 1;
+	}
+	to {
+		z-index: -1;
+		opacity: 0;
+	}
+}

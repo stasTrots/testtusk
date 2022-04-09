@@ -1,4 +1,4 @@
-import { GET_TOKEN, GET_USERS, ONLOAD_USERS, SET_POSITION, SET_USERS } from "../types"
+import { GET_TOKEN, GET_USERS, MODAL_STATE, ONLOAD_USERS, SET_POSITION, SET_USERS } from "../types"
 
 const initialState = {
 	token: '',
@@ -8,7 +8,8 @@ const initialState = {
 		array: []
 	},
 	loader: false,
-	positions: []
+	positions: [],
+	modalState: false
 }
 
 const user = (state = initialState, { type,  payload }) => {
@@ -49,6 +50,11 @@ const user = (state = initialState, { type,  payload }) => {
 					totalUsers: payload.total_users
 				},
 				loader: false
+			}
+		case MODAL_STATE:
+			return {
+				...state,
+				modalState: payload
 			}
 		default: return state
 	}

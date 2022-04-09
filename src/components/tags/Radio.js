@@ -2,7 +2,7 @@ import React from "react"
 
 function Radio(props) {
 
-	const { array, title, cb } = props
+	const { array, title, cb, value } = props
 
 	return (
 		<div className="radio-form">
@@ -10,7 +10,7 @@ function Radio(props) {
 			{array.map(item => (
 				<div className="custom-radio" key={item.id}>
 					<label className='radio-form-label'>
-						<input type='radio' name="position_id" value={item.id} className='radio-input' onChange={cb}/>
+						<input type='radio' name="position_id" value={item.id} checked={value ? +value === +item.id : false} className='radio-input' onChange={cb}/>
 						<div className="custom-radio-label"><span>{item.name}</span></div>
 					</label>
 				</div>

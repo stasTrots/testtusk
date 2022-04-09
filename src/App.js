@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { Header } from './components/header';
 import { Main } from './components/main/Index';
+import Modal from './components/modal/Index.js'
 import { getUser, getPosition, getToken } from './redux/Users/action.js'
 
 function App(props) {
@@ -11,6 +12,7 @@ function App(props) {
   const { getUser, getPosition, getToken } = props
   // State
   const { url } = props.user.users
+  const { modalState } = props.user
   
   useEffect(() => {
     getUser({ url, condition: false })
@@ -23,6 +25,7 @@ function App(props) {
     <div className="App">
       <Header />
       <Main />
+      {modalState && <Modal />}
     </div>
   );
 }

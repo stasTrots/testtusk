@@ -1,0 +1,24 @@
+@import '../base.scss';
+
+.header {
+	display: flex;
+	justify-content: center;
+	
+	height: 60px;
+
+	background-color: #fff;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		margin: 0 auto;
+
+		.header-buttons {
+			display: grid;
+			grid-template-columns: repeat(2, 100px);
+			grid-gap: 10px;
+		}
+	}
+}

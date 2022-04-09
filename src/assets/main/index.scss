@@ -1,0 +1,55 @@
+@import './users.scss';
+@import './intro.scss';
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	margin-bottom: 100px;
+}
+.section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 100%;
+
+	margin-top: 140px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.intro {
+		.intro-text-container {
+			width: 380px;
+
+			margin: 0;
+		}
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 2559px) {
+	.intro { 
+		height: 650px;
+
+		background-position: bottom 2px right 0px;
+		background-size: 1136px 812px;
+		.intro-text-container {
+			width: 380px;
+
+			margin: 0;
+		}
+	}
+}
+@media only screen and (min-width: 2560px) {
+	.intro { 
+		height: 650px;
+
+		background-position: bottom 2px right 0px;
+		background-size: 1136px 812px;
+		.intro-text-container {
+			width: 380px;
+
+			margin: 0;
+		}
+	}
+}

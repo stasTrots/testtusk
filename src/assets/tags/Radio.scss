@@ -1,0 +1,67 @@
+.radio-form {
+	margin-top: 43px;
+
+	.radio-form-title {
+		height: 25px;
+		width: 100%;
+
+		margin-bottom: 14px;
+		
+		font-size: 16px;
+		line-height: 26px;
+		color: rgba(0, 0, 0, 0.87);
+	}
+	
+	.custom-radio [type='radio']:checked,
+	.custom-radio [type='radio']:not(:checked) {
+		position: absolute;
+		z-index: -100;
+		left: -100000px;
+	} 
+	.custom-radio [type="radio"]:checked + .custom-radio-label,.custom-radio [type="radio"]:not(:checked) + .custom-radio-label {
+		position: relative;
+		height: 20px;
+		width: 100%;
+		cursor: pointer;
+		line-height: 20px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 13px;
+	}
+	.custom-radio [type="radio"]:checked + .custom-radio-label:before,.custom-radio [type="radio"]:not(:checked) + .custom-radio-label:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 18px;
+		height: 18px;
+		border: 1px solid rgba(0, 189, 211, 1);
+		border-radius: 50%;
+		background: transparent;
+	}
+	.custom-radio [type="radio"]:checked + .custom-radio-label:after,.custom-radio [type="radio"]:not(:checked) + .custom-radio-label:after {
+		content: '';
+		width: 10px;
+		height: 10px;
+		background: rgba(0, 189, 211, 1);
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		border-radius: 50%;
+		transition: all .2s ease;
+	}
+	.custom-radio [type="radio"]:not(:checked) + .custom-radio-label:after {
+		opacity: 0;
+		transform: scale(0);
+	}
+	.custom-radio [type="radio"]:checked + .custom-radio-label:after {
+		opacity: 1;
+		transform: scale(1);
+	}
+	.custom-radio-label {
+		padding-left: 35px;
+	}
+	& > .custom-radio:last-child > .radio-form-label > .custom-radio-label{
+		margin: 0;
+	}
+}

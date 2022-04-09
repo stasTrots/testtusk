@@ -1,0 +1,37 @@
+.intro {
+	height: 500px;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0 16px;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../public/intro.jpeg');
+	background-repeat: no-repeat;
+	background-position: bottom 2px right -366px;
+	background-size: 1136px 812px;
+	color: #fff;
+
+	.intro-text-container {
+		width: 100%;
+		text-align: center;
+
+		margin-top: -32px;
+		h1 {
+			font-size: 40px;
+			font-weight: 400;
+			line-height: 40px;
+			margin: 0 0 20px 0;
+		}
+		span {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 26px;
+		}
+		button {
+			margin-top: 32px;
+		}
+	}
+}

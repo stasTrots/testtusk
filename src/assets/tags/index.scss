@@ -1,0 +1,44 @@
+@import '../base.scss';
+@import './Button.scss';
+@import './SectionHeader.scss';
+@import './File.scss';
+@import './Input.scss';
+@import './Radio.scss';
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.section-header {
+		width: 100%;
+	}
+	.input-file-container {
+		.input-file-label {
+			& > span:first-child {
+				width: 83px;
+			}
+		}
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 2559px) {
+	.section-header {
+		width: auto;
+	}
+	.input-file-container {
+		.input-file-label {
+			& > span:first-child {
+				width: 83px;
+			}
+		}
+	}
+
+}
+@media screen and (min-width: 2560px) {
+	.section-header {
+		width: 100%;
+	}
+	.input-file-container {
+		.input-file-label {
+			& > span:first-child {
+				width: 83px;
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+@import '../base.scss';
+
+.button {
+	width: 100px;
+	height: 34px;
+	
+	background-color: $btnNormal;
+	color: $btnColorNormal;
+
+	border: none;
+	border-radius: 80px;
+	
+	font-size: 16px;
+	line-height: 26px;
+	&.get-btn {
+		width: 120px;
+	}
+	&.center {
+		margin: 0 auto;
+	}
+	&:hover {
+		background-color: $btnHover;
+	}
+	&:disabled {
+		background-color: $btnDisabled;
+		color: $btnColorDis;
+	}
+}

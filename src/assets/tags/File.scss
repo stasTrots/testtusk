@@ -1,0 +1,57 @@
+.input-file-container {
+	width: 100%;
+	height: 54px;
+
+	border-radius: 4px;
+	margin: 50px 0;
+
+	outline: 2px solid rgba($color: #000000, $alpha: 0);
+	outline-offset: -1px;
+
+	transition: all .2s linear;
+	&.invalid {
+		outline: 2px solid #CB3D40;
+	}
+	.input-file-label {
+		display: flex;
+
+		width: 100%;
+		height: 100%;
+
+		& > span {
+			display: flex;
+			align-items: center;
+			text-align: center;
+
+			font-size: 16px;
+			line-height: 26px;
+		}
+		& > span:first-child {
+			justify-content: center;
+
+			width: 100px;
+			height: 100%;
+			
+			color: rgba(0, 0, 0, 0.87);
+			border: 1px solid rgba(0, 0, 0, 0.87);
+			border-radius: 4px 0 0 4px;
+		}
+		& > span:last-child {
+			width: 297px;
+			height: 100%;
+
+			padding-left: 15px;
+
+			color: #7E7E7E;
+
+			border-top: 1px solid #D0CFCF;
+			border-right: 1px solid #D0CFCF;
+			border-bottom: 1px solid #D0CFCF;
+			border-radius: 0 4px 4px 0;
+		}
+		
+	}
+	.input-file {
+		display: none;
+	}
+}
